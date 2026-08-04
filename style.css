@@ -355,3 +355,8 @@ font-size:70px;
 }
 
 }
+.hero-logo {
+    width: 350px;
+    max-width: 80%;
+    height: auto;
+}
