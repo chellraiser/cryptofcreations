@@ -362,7 +362,7 @@ font-size:70px;
 }
 .hero{
     display:flex;
-    align-items:center;
+    align-items:left;
     justify-content:space-between;
     gap:80px;
     min-height:80vh;
@@ -376,7 +376,7 @@ font-size:70px;
 .hero-image{
     flex:1;
     display:flex;
-    justify-content:center;
+    justify-content:right;
 }
 
 .hero-image img{
