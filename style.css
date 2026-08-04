@@ -30,14 +30,13 @@ border-bottom:1px solid #222;
 }
 
 
-.logo{
-    font-family:'Cormorant Garamond', serif;
-    font-size:22px;
-    line-height:.8;
-    letter-spacing:4px;
-    text-transform:uppercase;
+.logo {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
 }
-
 
 
 nav a{
