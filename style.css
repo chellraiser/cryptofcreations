@@ -358,33 +358,34 @@ font-size:70px;
     max-width: 80%;
     height: auto;
 }
-.hero{
-    display:flex;
-    align-items:left;
-    justify-content:space-between;
-    gap:80px;
-    min-height:80vh;
-    padding:80px 8%;
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 80px 10%;
+}
+.hero-text {
+    flex: 1;
 }
 
-.hero-text{
-    flex:1;
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.hero-image{
-    flex:1;
-    display:flex;
-    justify-content:right;
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 12px;
 }
 
-.hero-image img{
-    width:100%;
-    max-width:550px;
-    border-radius:12px;
+.hero-logo {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
 }
 
-.hero-logo{
-    width:350px;
-    max-width:100%;
-    margin:20px 0;
-}
