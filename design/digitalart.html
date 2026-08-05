@@ -1,1 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Art | Crypt of Creations</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background:#080808;
+    color:#f5f5f0;
+    font-family:'Inter',sans-serif;
+}
+
+
+/* HEADER */
+
+header{
+
+    padding:50px 8%;
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+
+.back{
+
+    color:#888;
+    text-decoration:none;
+
+    font-size:.75rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    transition:.3s;
+
+}
+
+
+.back:hover{
+
+    color:white;
+
+}
+
+
+
+/* HERO */
+
+.hero{
+
+    padding:100px 8% 70px;
+
+}
+
+
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(4rem,8vw,7rem);
+
+    font-weight:500;
+
+    letter-spacing:-2px;
+
+}
+
+
+
+.hero p{
+
+    max-width:650px;
+
+    margin-top:25px;
+
+    color:#aaa;
+
+    line-height:1.8;
+
+}
+
+
+
+
+.archive-meta{
+
+    display:flex;
+
+    gap:45px;
+
+    margin-top:40px;
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+
+    color:#777;
+
+    text-transform:uppercase;
+
+}
+
+
+
+/* GALLERY */
+
+.gallery{
+
+    width:84%;
+
+    margin:auto;
+
+    columns:3;
+
+    column-gap:35px;
+
+    padding-bottom:100px;
+
+}
+
+
+
+.art-piece{
+
+    break-inside:avoid;
+
+    margin-bottom:35px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:fadeUp .8s forwards;
+
+}
+
+
+
+.art-piece:nth-child(2){animation-delay:.1s;}
+.art-piece:nth-child(3){animation-delay:.2s;}
+.art-piece:nth-child(4){animation-delay:.3s;}
+.art-piece:nth-child(5){animation-delay:.4s;}
+.art-piece:nth-child(6){animation-delay:.5s;}
+.art-piece:nth-child(7){animation-delay:.6s;}
+.art-piece:nth-child(8){animation-delay:.7s;}
+.art-piece:nth-child(9){animation-delay:.8s;}
+.art-piece:nth-child(10){animation-delay:.9s;}
+
+
+
+.art-piece img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+
+
+.art-piece:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+.art-info{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+
+
+.art-piece:hover .art-info{
+
+    opacity:1;
+
+}
+
+
+
+.art-info h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.5rem;
+
+    font-weight:500;
+
+}
+
+
+
+.art-info p{
+
+    margin-top:10px;
+
+    color:#ccc;
+
+    font-size:.7rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    padding:50px 8%;
+
+    color:#777;
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+
+}
+
+
+
+
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+    .gallery{
+
+        columns:2;
+
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+    .gallery{
+
+        columns:1;
+
+        width:90%;
+
+    }
+
+
+    .archive-meta{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+<a class="back" href="design.html">
+← Return to Design
+</a>
+
+</header>
+
+
+
+
+<section class="hero">
+
+
+<h1>Digital Art</h1>
+
+
+<p>
+
+A collection of digital illustrations, composites, and experimental
+visual pieces exploring identity, texture, storytelling, and
+imagination through digital mediums.
+
+</p>
+
+
+
+<div class="archive-meta">
+
+<span>Digital Artwork</span>
+
+<span>2018 — Present</span>
+
+<span>15 Works</span>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="gallery">
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-break-zds.png" alt="Break">
+<div class="art-info">
+<h2>Break</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-clicker.png" alt="Clicker">
+<div class="art-info">
+<h2>Clicker</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-coldcured.png" alt="Cold Cured">
+<div class="art-info">
+<h2>Cold Cured</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-end-zds.png" alt="End">
+<div class="art-info">
+<h2>End</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-eys.png" alt="EYS">
+<div class="art-info">
+<h2>EYS</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-gasface.png" alt="Gas Face">
+<div class="art-info">
+<h2>Gas Face</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-grip.png" alt="Grip">
+<div class="art-info">
+<h2>Grip</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-heros-zds.png" alt="Heroes">
+<div class="art-info">
+<h2>Heroes</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-mj.png" alt="MJ">
+<div class="art-info">
+<h2>MJ</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-mother.png" alt="Mother">
+<div class="art-info">
+<h2>Mother</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-ribcage.png" alt="Ribcage">
+<div class="art-info">
+<h2>Ribcage</h2>
+<p>Digital Art</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-stay.png" alt="Stay">
+<div class="art-info">
+<h2>Stay</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-threads-zds.png" alt="Threads">
+<div class="art-info">
+<h2>Threads</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-together-zds.png" alt="Together">
+<div class="art-info">
+<h2>Together</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+
+<div class="art-piece">
+<img src="../assets/images/digital-together2-zds.png" alt="Together II">
+<div class="art-info">
+<h2>Together II</h2>
+<p>Digital Art • Zero Dark Silent</p>
+</div>
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+CRYPT OF CREATIONS © 2026
+
+</footer>
+
+
+
+</body>
+
+</html>
