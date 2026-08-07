@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stationary | Crypt of Creations</title>
+<title>Stationery | Crypt of Creations</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -27,26 +27,19 @@ font-family:'Inter',sans-serif;
 }
 
 
-
 header{
-
 padding:50px 8%;
 border-bottom:1px solid rgba(255,255,255,.1);
-
 }
 
 
-
 .back{
-
 color:#888;
 text-decoration:none;
 font-size:.75rem;
 letter-spacing:2px;
 text-transform:uppercase;
-
 }
-
 
 
 .back:hover{
@@ -54,80 +47,49 @@ color:white;
 }
 
 
-
-
-
 .hero{
-
 padding:100px 8% 70px;
-
 }
-
 
 
 .hero h1{
-
 font-family:'Cormorant Garamond',serif;
-
 font-size:clamp(4rem,8vw,7rem);
-
 font-weight:500;
-
 letter-spacing:-2px;
-
 }
-
-
 
 
 .hero p{
-
 max-width:650px;
-
 margin-top:25px;
-
 color:#aaa;
-
 line-height:1.8;
-
 }
-
-
 
 
 .archive-meta{
 
 display:flex;
-
 gap:45px;
-
 margin-top:40px;
-
 font-size:.75rem;
-
 letter-spacing:2px;
-
 text-transform:uppercase;
-
 color:#777;
 
 }
 
 
 
-
-
 /* PRINT GRID */
-
 
 .print-grid{
 
 width:84%;
-
 margin:auto;
 
 display:grid;
-
 grid-template-columns:repeat(2,1fr);
 
 gap:40px;
@@ -138,14 +100,10 @@ padding-bottom:100px;
 
 
 
-
-
 .print-piece{
 
 background:#111;
-
 border:1px solid rgba(255,255,255,.1);
-
 overflow:hidden;
 
 }
@@ -155,10 +113,15 @@ overflow:hidden;
 .print-piece img{
 
 width:100%;
+height:400px;
 
-aspect-ratio:4/3;
+object-fit:contain;
 
-object-fit:cover;
+background:#111;
+
+padding:15px;
+
+cursor:pointer;
 
 transition:.5s;
 
@@ -168,11 +131,9 @@ transition:.5s;
 
 .print-piece:hover img{
 
-transform:scale(1.04);
+transform:scale(1.03);
 
 }
-
-
 
 
 
@@ -187,9 +148,7 @@ padding:30px;
 .print-info h2{
 
 font-family:'Cormorant Garamond',serif;
-
 font-size:2.5rem;
-
 font-weight:500;
 
 }
@@ -201,9 +160,7 @@ font-weight:500;
 margin-top:10px;
 
 font-size:.7rem;
-
 letter-spacing:2px;
-
 text-transform:uppercase;
 
 color:#888;
@@ -212,51 +169,70 @@ color:#888;
 
 
 
+/* LIGHTBOX */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+z-index:999;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.92);
+
+justify-content:center;
+align-items:center;
+
+padding:40px;
+
+}
 
 
-.empty-state{
 
-width:84%;
+.lightbox img{
 
-margin:40px auto 120px;
+max-width:90%;
+max-height:90%;
 
-height:350px;
+object-fit:contain;
 
-border:1px solid rgba(255,255,255,.1);
+}
+
+
+
+.lightbox.active{
 
 display:flex;
 
-justify-content:center;
+}
 
-align-items:center;
 
-text-align:center;
+
+.close-lightbox{
+
+position:absolute;
+
+top:25px;
+right:40px;
+
+font-size:45px;
+
+color:white;
+
+cursor:pointer;
 
 }
 
 
 
-.empty-state h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-font-weight:500;
-
-}
-
-
-
-.empty-state p{
-
-margin-top:15px;
-
-color:#888;
-
-}
-
-
+/* FOOTER */
 
 
 footer{
@@ -276,12 +252,18 @@ color:#777;
 
 
 
-
 @media(max-width:800px){
 
 .print-grid{
 
 grid-template-columns:1fr;
+
+}
+
+.archive-meta{
+
+flex-direction:column;
+gap:15px;
 
 }
 
@@ -344,8 +326,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 <section class="print-grid">
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-jan.png" alt="January Stationery Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-jan.png" alt="January Stationery Design">
 
 <div class="print-info">
 <h2>January 2026 Calendar</h2>
@@ -356,8 +339,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-june.png" alt="June Stationery Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-june.png" alt="June Stationery Design">
 
 <div class="print-info">
 <h2>June 2026 Calendar</h2>
@@ -368,8 +352,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-june2.png" alt="June Stationery Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-june2.png" alt="June Stationery Design">
 
 <div class="print-info">
 <h2>June 2026 Calendar II</h2>
@@ -380,8 +365,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-listbutterfly.png" alt="Butterfly List Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-listbutterfly.png" alt="Butterfly List Design">
 
 <div class="print-info">
 <h2>Butterfly Shopping List</h2>
@@ -392,8 +378,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-listfloral.png" alt="Floral List Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-listfloral.png" alt="Floral List Design">
 
 <div class="print-info">
 <h2>Floral To-Do List</h2>
@@ -404,8 +391,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-listowl.png" alt="Owl List Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-listowl.png" alt="Owl List Design">
 
 <div class="print-info">
 <h2>Owl To-Do List</h2>
@@ -416,8 +404,9 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-march.png" alt="March Stationery Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-march.png" alt="March Stationery Design">
 
 <div class="print-info">
 <h2>March 2026 Calendar</h2>
@@ -428,11 +417,12 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
+
 <div class="print-piece">
-<img src="../assets/images/stationary-movielist.png" alt="Movie List Design">
+<img onclick="openLightbox(this.src)" src="../assets/images/stationary-movielist.png" alt="Movie List Design">
 
 <div class="print-info">
-<h2>Movie List Collection </h2>
+<h2>Movie List Collection</h2>
 <p>Stationery • Layout Design</p>
 </div>
 
@@ -443,34 +433,13 @@ A collection of printed works, personal stationery, lists, and paper designs cre
 
 
 
-<!--
+<div class="lightbox" id="lightbox">
 
-WHEN READY:
+<span class="close-lightbox" onclick="closeLightbox()">×</span>
 
-
-<section class="print-grid">
-
-
-<div class="print-piece">
-
-<img src="../assets/images/stationary-name.png">
-
-<div class="print-info">
-
-<h2>Project Name</h2>
-
-<p>Stationery • Print Design</p>
+<img id="lightbox-img">
 
 </div>
-
-</div>
-
-
-</section>
-
-
--->
-
 
 
 
@@ -480,6 +449,30 @@ WHEN READY:
 CRYPT OF CREATIONS © 2026
 
 </footer>
+
+
+
+<script>
+
+function openLightbox(src){
+
+document.getElementById("lightbox-img").src = src;
+
+document.getElementById("lightbox").classList.add("active");
+
+}
+
+
+
+function closeLightbox(){
+
+document.getElementById("lightbox").classList.remove("active");
+
+}
+
+
+</script>
+
 
 
 </body>
