@@ -109,7 +109,6 @@ color:#aaa;
 input,
 select,
 textarea{
-
 width:100%;
 background:#111;
 border:1px solid rgba(255,255,255,.15);
@@ -119,16 +118,13 @@ font-family:'Inter',sans-serif;
 font-size:.9rem;
 outline:none;
 transition:.3s;
-
 }
 
 
 input:focus,
 select:focus,
 textarea:focus{
-
 border-color:rgba(255,255,255,.5);
-
 }
 
 
@@ -151,24 +147,63 @@ color:#666;
 /* TWO COLUMN ROW */
 
 .form-row{
-
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:25px;
+}
 
+
+/* AGREEMENT */
+
+.form-group label:has(input[type="checkbox"]){
+display:flex;
+flex-direction:row;
+align-items:flex-start;
+gap:10px;
+text-transform:none;
+letter-spacing:0;
+font-size:.75rem;
+line-height:1.6;
+color:#888;
+}
+
+
+.form-group label input[type="checkbox"]{
+width:auto;
+margin:3px 0 0 0;
+}
+
+
+/* SUBMIT BUTTON */
+
+.submit-button{
+background:#f5f5f0;
+color:#080808;
+border:none;
+padding:18px 30px;
+font-family:'Inter',sans-serif;
+font-size:.7rem;
+letter-spacing:2px;
+text-transform:uppercase;
+cursor:pointer;
+transition:.3s;
+align-self:flex-start;
+}
+
+
+.submit-button:hover{
+background:#aaa;
 }
 
 
 /* FOOTER */
 
 footer{
-
 border-top:1px solid rgba(255,255,255,.1);
 padding:50px 8%;
 font-size:.75rem;
 letter-spacing:2px;
 color:#777;
-
 }
 
 
@@ -216,8 +251,8 @@ it to life.
 <section class="form-wrapper">
 
 <form>
-```
-```html id="8xq2ma"
+
+
 <div class="form-row">
 
 <div class="form-group">
@@ -254,7 +289,9 @@ required
 
 <div class="form-group">
 
-<label for="project">What are you looking to commission?</label>
+<label for="project">
+What are you looking to commission?
+</label>
 
 <select id="project" name="project" required>
 
@@ -338,7 +375,9 @@ placeholder="Colors, mood, references, artists, existing branding, visual direct
 
 <div class="form-group">
 
-<label for="budget">Budget Range</label>
+<label for="budget">
+Budget Range
+</label>
 
 <select id="budget" name="budget">
 
@@ -377,7 +416,9 @@ Not sure yet
 
 <div class="form-group">
 
-<label for="deadline">Desired Deadline</label>
+<label for="deadline">
+Desired Deadline
+</label>
 
 <input
 type="text"
@@ -420,8 +461,8 @@ placeholder="Anything else you'd like me to know?"
 ></textarea>
 
 </div>
-```
-```html id="v7k3np"
+
+
 <div class="form-group">
 
 <label>
@@ -430,7 +471,6 @@ placeholder="Anything else you'd like me to know?"
 type="checkbox"
 name="agreement"
 required
-style="width:auto; margin-right:10px;"
 >
 
 I understand that submitting this form is a commission inquiry
@@ -462,4 +502,3 @@ CRYPT OF CREATIONS © 2026
 
 </html>
 ```
-
